@@ -21,10 +21,6 @@ import "github.com/toorop/go-bittrex"
 }
 */
 
-type OneOrderBook struct {
-	bittrex.Orderb
-}
+type OneOrderBook bittrex.Orderb 
 
-type OrderBook struct {
-	bittrex.OrderBook
-}
+type OrderBook bittrex.OrderBook 
