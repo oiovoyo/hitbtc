@@ -47,7 +47,7 @@ func NewTradeLimitOrder(symbol string, side Side, amount int, price float64) *Tr
 		ClientOrderId: OrderID(),
 		Symbol:        symbol,
 		Side:          Side(side),
-		Price:         fmt.Sprintf("%f", price),
+		Price:         fmt.Sprintf("%.8f", price),
 		Quantity:      amount, //fmt.Sprintf("%.8f", amount),
 		Type:          limit,
 		TimeInForce:   GTC,

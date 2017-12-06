@@ -21,6 +21,6 @@ import "github.com/toorop/go-bittrex"
 }
 */
 
-type OneOrderBook bittrex.Orderb 
+type OneOrderBook = bittrex.Orderb
 
-type OrderBook bittrex.OrderBook 
+type OrderBook = bittrex.OrderBook

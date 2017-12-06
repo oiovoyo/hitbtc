@@ -192,6 +192,9 @@ func (h *Hitbtc) adjustPriceAmount(pair string, amount, price float64) (amountLo
 func (h *Hitbtc) placeOrder(pair string, side Side, amount, price float64) (string, error) {
 
 	amountLots, priceNew, err := h.adjustPriceAmount(pair, amount, price)
+	fmt.Printf("placeOrder(\"%s\",\"%s\",%.8f,%.8f)\n", pair, side, amount, price)
+	fmt.Printf("adjustPriceAmount(\"%s\",%.8f,%.8f) = %d,%.8f\n", pair, amount, price, amountLots, priceNew)
+
 	if err != nil {
 		return "", err
 	}
@@ -461,4 +464,11 @@ func (h *Hitbtc) GetDepositAddress(coin string) (string, error) {
 		return "", err
 	}
 	return response["address"], nil
+}
+func (h *Hitbtc) WalletValid(coin string) bool {
+	_, err := h.GetDepositAddress(coin)
+	if err != nil {
+		return false
+	}
+	return true
 }

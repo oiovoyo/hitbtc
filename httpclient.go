@@ -73,7 +73,7 @@ import time
 import unirest as unirest
 
 key = ""
-secret = "XXXXXXXXXXXXXXXXXXXXXXXXXX"
+secret = ""
 nonce = str(int(time.mktime(datetime.datetime.now().timetuple()) * 1000 + datetime.datetime.now().microsecond / 1000))
 
 clientOrderId = "".join(random.choice(string.digits + string.ascii_lowercase) for _ in range(30))
