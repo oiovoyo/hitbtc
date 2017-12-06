@@ -1,6 +1,6 @@
 package hitbtc
 
-import "github.com/toorop/go-bittrex"
+import "github.com/oiovoyo/go-bittrex"
 
 /*
 {
